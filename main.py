@@ -16,7 +16,7 @@ Config.set('kivy', 'log_name', 'kivy_%y-%m-%d_%_.txt')
 Config.set('kivy', 'log_enable', 1)
 Config.write()
 
-
+#import cv2
 from PIL import Image
 
 Intent = autoclass('android.content.Intent')
@@ -33,12 +33,11 @@ class Picture(Scatter):
 
 class TakePictureApp(App):
     def build(self):
-        PythonActivity.requestPermissions(["ndroid.permission.CAMERA"])
-        self.index = 0
-        activity.bind(on_activity_result=self.on_activity_result)
+        pass
+        #self.index = 0
+        #activity.bind(on_activity_result=self.on_activity_result)
 
     def take_picture(self):
-
         def create_img_file():
             File = autoclass('java.io.File')
             storageDir = Context.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
@@ -65,19 +64,20 @@ class TakePictureApp(App):
         intent.putExtra(MediaStore.EXTRA_OUTPUT, parcelable)
         mActivity.startActivityForResult(intent, 0x123)
 
-    def on_activity_result(self, requestCode, resultCode, intent):
-        if requestCode == 0x123:
-            Clock.schedule_once(partial(self.add_picture, self.last_fn), 0)
+    # def on_activity_result(self, requestCode, resultCode, intent):
+    #     if requestCode == 0x123:
+    #         Clock.schedule_once(partial(self.add_picture, self.last_fn), 0)
 
-    def add_picture(self, fn, *args):
-        im = Image.open(fn)
-        width, height = im.size
-        im.thumbnail((width / 4, height / 4), Image.ANTIALIAS)
-        im.save(fn, quality=95)
-        self.root.add_widget(Picture(source=fn, center=self.root.center))
+    # def add_picture(self, fn, *args):
+    #     im = Image.open(fn)
+    #     width, height = im.size
+    #     im.thumbnail((width / 4, height / 4), Image.ANTIALIAS)
+    #     im.save(fn, quality=95)
+    #     self.root.add_widget(Picture(source=fn, center=self.root.center))
 
     def on_pause(self):
         return True
 
 
 TakePictureApp().run()
+PythonActivity.requestPermissions(["android.permission.CAMERA"])
