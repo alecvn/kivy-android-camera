@@ -25,6 +25,7 @@ Uri = autoclass('android.net.Uri')
 Environment = autoclass('android.os.Environment')
 Context = autoclass("android.content.Context")
 FileProvider = autoclass('android.support.v4.content.FileProvider')
+PythonActivity = autoclass("org.kivy.android.PythonActivity").mActivity
 
 class Picture(Scatter):
     source = StringProperty(None)
@@ -32,6 +33,7 @@ class Picture(Scatter):
 
 class TakePictureApp(App):
     def build(self):
+        PythonActivity.requestPermissions(["ndroid.permission.CAMERA"])
         self.index = 0
         activity.bind(on_activity_result=self.on_activity_result)
 
