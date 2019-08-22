@@ -1,0 +1,6 @@
+bin/
+venv/
+*~
+.buildozer
+logs/
+log.txt
