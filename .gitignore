@@ -3,4 +3,3 @@ venv/
 *~
 .buildozer
 logs/
-log.txt
