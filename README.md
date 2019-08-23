@@ -16,7 +16,7 @@ Then add the following to `pythonforandroid/bootstraps/sdl2/build/templates/Andr
 
 	<provider
 		android:name="android.support.v4.content.FileProvider"
-		android:authorities="org.your.domain.fileprovider"
+		android:authorities="org.test.takepicture.fileprovider"
 		android:exported="false"
 		android:grantUriPermissions="true">
 	  <meta-data
