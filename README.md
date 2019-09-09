@@ -39,6 +39,8 @@ You will also need to specify where you cloned `python-for-android` in your `bui
 
 	p4a.source_dir = ../python-for-android
 
+Depending on - I believe - your version of `buildozer`, you might need to target Android NDK version 19b.
+
 ## Deploy to device
 	
 	buildozer android debug deploy run logcat
