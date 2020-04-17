@@ -23,6 +23,9 @@ Then add the following to `pythonforandroid/bootstraps/sdl2/build/templates/Andr
         android:name="android.support.FILE_PROVIDER_PATHS"
         android:resource="@xml/file_paths" />
 	</provider>
+	
+Note:
+In Android 10 the `FileProvider` library now sits at `androidx.core.content.FileProvider`.
 
 Also, create the directory and file at `pythonforandroid/bootstraps/sdl2/build/src/main/res/xml/file_paths.xml` with the following contents:
 
