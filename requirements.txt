@@ -7,7 +7,7 @@ Cython==0.29.13
 docutils==0.15.2
 idna==2.8
 importlib-metadata==0.19
-Jinja2==2.10.1
+Jinja2==2.11.3
 Kivy==1.11.1
 Kivy-Garden==0.1.4
 MarkupSafe==1.1.1
