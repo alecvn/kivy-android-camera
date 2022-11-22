@@ -13,7 +13,7 @@ Kivy-Garden==0.1.4
 MarkupSafe==1.1.1
 pep517==0.6.0
 pexpect==4.7.0
-Pillow==6.2.0
+Pillow==9.3.0
 ptyprocess==0.6.0
 Pygments==2.4.2
 pytoml==0.1.21
