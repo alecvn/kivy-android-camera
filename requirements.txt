@@ -1,6 +1,6 @@
 appdirs==1.4.3
 buildozer==0.39
-certifi==2019.6.16
+certifi==2022.12.7
 chardet==3.0.4
 colorama==0.4.1
 Cython==0.29.13
